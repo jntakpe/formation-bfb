@@ -1,5 +1,8 @@
 package com.bforbank.formation.bfb;
 
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  * Classe mère de l'application
  *
@@ -7,11 +10,19 @@ package com.bforbank.formation.bfb;
  */
 public class Main {
 
-    private static final String[] PROPS = new String[]{"JAVA_HOME", "M2_HOME", "TOMCAT_HOME"};
-
     public static void main(String[] args) {
-        //Donner la longueur de tous les chemins System.getEnv("MA_PROPRIETE")
+        System.out.println(daysSinceImBornJdk7());
+    }
 
+    public static long daysSinceImBorn() {
+        return 0L;
+    }
+
+    public static long daysSinceImBornJdk7() {
+        Calendar dateOfBirth = Calendar.getInstance();
+        dateOfBirth.set(1986, Calendar.SEPTEMBER, 25);
+        long diff = new Date().getTime() - dateOfBirth.getTime().getTime();
+        return diff / (1000 * 60 * 60 * 24);
     }
 
 }
