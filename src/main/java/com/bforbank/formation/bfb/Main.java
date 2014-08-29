@@ -1,5 +1,7 @@
 package com.bforbank.formation.bfb;
 
+import java.util.Date;
+
 /**
  * Classe mère de l'application
  *
@@ -7,11 +9,36 @@ package com.bforbank.formation.bfb;
  */
 public class Main {
 
-    private static final String[] PROPS = new String[]{"JAVA_HOME", "M2_HOME", "TOMCAT_HOME"};
-
     public static void main(String[] args) {
-        //Donner la longueur de tous les chemins System.getEnv("MA_PROPRIETE")
+    }
 
+
+    private static void primTest() {
+        int a = 1;
+        int b = 1;
+        System.out.println(a == b);
+    }
+
+    private static void objTest() {
+        long sysDate = System.currentTimeMillis();
+        Date a = new Date(sysDate);
+        Date b = new Date(sysDate);
+        System.out.println(a == b);
+        System.out.println(a.equals(b));
+    }
+
+    private static void strTest() {
+        String a = "test";
+        String b = "test";
+        System.out.println(a == b);
+        System.out.println(a.equals(b));
+    }
+
+    private static void strNewTest() {
+        String a = new String("test");
+        String b = new String("test");
+        System.out.println(a == b);
+        System.out.println(a.equals(b));
     }
 
 }
