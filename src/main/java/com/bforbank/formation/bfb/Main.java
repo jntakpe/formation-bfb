@@ -7,7 +7,10 @@ package com.bforbank.formation.bfb;
  */
 public class Main {
 
-    public static void main(String[] args) throws Exception {
+    private static final String[] PROPS = new String[]{"JAVA_HOME", "M2_HOME", "TOMCAT_HOME"};
+
+    public static void main(String[] args) {
+        //Donner la longueur de tous les chemins System.getEnv("MA_PROPRIETE")
 
     }
 
