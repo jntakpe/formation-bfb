@@ -1,5 +1,7 @@
 package com.bforbank.formation.bfb;
 
+import java.util.ArrayList;
+
 /**
  * Classe mère de l'application
  *
@@ -8,11 +10,19 @@ package com.bforbank.formation.bfb;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        SuperThread st = new SuperThread();
-        st.start();
-        Thread.sleep(10);
-        st.stop = true;
-        System.out.println("Fin du programme");
+        int sum = 0;
+        for (Object age : listAges()) {
+            sum += (Integer) age;
+        }
+        System.out.println(sum);
     }
 
+    public static ArrayList listAges() {
+        ArrayList list = new ArrayList();
+        list.add(25);
+        list.add(27);
+        list.add("65");
+        list.add(30);
+        return list;
+    }
 }
