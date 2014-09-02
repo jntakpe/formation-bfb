@@ -1,7 +1,7 @@
 package com.bforbank.formation.bfb;
 
-import java.util.Calendar;
-import java.util.Date;
+import java.io.IOException;
+import java.util.List;
 
 /**
  * Classe mère de l'application
@@ -10,19 +10,8 @@ import java.util.Date;
  */
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println(daysSinceImBornJdk7());
-    }
-
-    public static long daysSinceImBorn() {
-        return 0L;
-    }
-
-    public static long daysSinceImBornJdk7() {
-        Calendar dateOfBirth = Calendar.getInstance();
-        dateOfBirth.set(1986, Calendar.SEPTEMBER, 25);
-        long diff = new Date().getTime() - dateOfBirth.getTime().getTime();
-        return diff / (1000 * 60 * 60 * 24);
+    public static void main(String[] args) throws IOException {
+        CinemaService cinemaService = new CinemaServiceImpl();
     }
 
 }
